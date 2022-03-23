@@ -266,7 +266,7 @@ public:
     SIMDPP_INL mask_int64(const mask_int64<N>& a) : e(a) {}
 
     SIMDPP_INL operator mask_int64<N>() const { return e; }
-    SIMDPP_INL operator uint64<N>() const { return e; }
+	SIMDPP_INL operator uint64<N>() const { return uint64<N>(e); }
     SIMDPP_INL mask_int64<N> eval() const { return e; }
 };
 
